@@ -5,8 +5,8 @@ from mpkg import data_man
 import os
 
 
-def logic_test():
-    # known metrics
+def deaccum_test():
+    # tests de-accumulation algorithm
 
     deaccum_test = csv_io.csv_input(os.getcwd().replace('\\', '/') + "/test_csv_files/input/deaccumRainfall_test.csv")
     path = os.getcwd().replace('\\', '/') + "/test_csv_files/input/accumRainfall_test.csv"
@@ -15,10 +15,9 @@ def logic_test():
 
     for itt in range(0, len(deaccum_data)):
         if round(deaccum_test[itt][1], 2) != round(deaccum_data[itt][1], 2):
-            print("de-accumulation test: Failed")
+            print("De-accumulation Test: Failed")
         else:
-            print("de-accumulation test: Passed")
+            print("De-accumulation Test: Passed")
 
 
-logic_test()
-
+deaccum_test()
