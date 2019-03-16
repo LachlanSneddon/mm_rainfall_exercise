@@ -13,7 +13,10 @@ ________________________________________________________________________________
 	The purpose of this program is to take an input from a CSV file that has data 
 	recorded as hourly running totals and de-accumulate that data into individual data 
 	points. The data is then written to a CSV file with the original file name + Output
-	and stored in the output folder. 
+	and stored in the output folder. CSV files can be run in batches.
+
+===========================================================================================
+===========================================================================================
 
 2: Running the program
 	1: Copy chosen CSV files into the "src/csv_files/input" directory.
@@ -24,7 +27,8 @@ ________________________________________________________________________________
 
 	The output file will be created in the output directory
 		
-	
+===========================================================================================
+===========================================================================================	
 
 3: Assumptions
 	The customers database contains a table with the same layout as the supplied CSV
@@ -32,6 +36,7 @@ ________________________________________________________________________________
 	The CSV files provided in future will be comma delimited 
 	Any machine running the scripts will have Python3 installed
 	Any further development will be written in Python3 not Python2
+	Operators of the script have an understanding of invalid data 
 
 ===========================================================================================
 ===========================================================================================
@@ -43,9 +48,25 @@ ________________________________________________________________________________
 	possible albiet extremely unlikely in Pennsylvania. Any buffer added to the record
 	would be pure speculation and scientifically unsound.  
 
+	IO scripts could changed to remove/ignore data and time values that are not sensible
+	but I decided on throwing exceptions and exiting as any operator of the script should 
+	be informed of invalid data. A compromise would be to catch the exception and print
+	the issue, but an operator may not check the error log if they get an output csv.
+
+	I considered adding argument inputs to give the user more control of how the script
+	runs (such as choosing output names/directories) but decided that simplicity is more 
+	useful, and adding unnecessary parameters would decrease usability. 
+
+	The given data had a few limitations that made it unideal for testing functionality
+	properly. Every record was recorded at 12:00am and was seperated by at least a day.
+	This meant that there was no hourly running totals to deaccumulate and any peak thirty
+	minute would simply be the peak record. The data_generation script generated realistic
+	data that created a running total if 
+
 	All data manipulation is input independent. To run an SQL database or API, create 
 	an IO script to convert the chosen data into a list of tuples and to convert the 
 	tuples back for the output. A the 'main' file can be edited to run other input 
 	types with if statements and arguments. 
 
+	
 

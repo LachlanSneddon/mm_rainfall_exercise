@@ -30,8 +30,9 @@ def main():
             for row in peak_thirty_data:
                 peak_thirty_sum += float(row[1])
 
-            print("the peak thirty minute data set is: ")
+            print("The peak thirty minute data set is: ")
             print(peak_thirty_data)
+            print("With a maximum rainfall of: " + str(peak_thirty_sum))
         else:
             print(file + " is not a csv")
 

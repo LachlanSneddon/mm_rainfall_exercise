@@ -22,7 +22,7 @@ def csv_input(path):
             # checks to ensure rain measurement is positive (a maximum could be improper)
             if 0 <= int(row[0]) <= epoch_time:
                 if float(row[1]) >= 0:
-                    csv_data += [(int(row[0]), row[1])]
+                    csv_data += [(int(row[0]), float(row[1]))]
                 else:
                     raise Exception("invalid rain measurement on line " + str(count) + " of csv")
             else:
