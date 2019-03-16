@@ -18,11 +18,15 @@ ________________________________________________________________________________
 ===========================================================================================
 
 2: Running the program
+	Windows
 	1: Copy chosen CSV files into the "src/csv_files/input" directory.
-	2: Open command prompt and move to the "src" directory.
-	3: If python.exe is in the PATH environment variable type "python.exe "__main__.py"
-	   If python is not in the PATH environment variable replace python.exe with the absolute
-	   path to python.exe
+	2: Run the file "deaccumulate.bat"
+	
+	Linux
+	1: Open the command prompt
+	2: Navigate to the "src" directory
+	2: Enter the command: python __main__.py		
+
 
 	The output file will be created in the output directory
 		
@@ -37,6 +41,7 @@ ________________________________________________________________________________
 	Any further development will be written in Python3 not Python2
 	Operators of the script have an understanding of invalid data 
 	Added data could go back as far as the unix Epoch (time = 0)
+	That the python interpreter is in the PATH environment variable
 
 ===========================================================================================
 ===========================================================================================
