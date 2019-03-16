@@ -5,7 +5,6 @@ Content
 3: Assumptions
 4: Rational and Misc Notes
 
-
 ___________________________________________________________________________________________
 ===========================================================================================
 ===========================================================================================
@@ -37,12 +36,13 @@ ________________________________________________________________________________
 	Any machine running the scripts will have Python3 installed
 	Any further development will be written in Python3 not Python2
 	Operators of the script have an understanding of invalid data 
+	Added data could go back as far as the unix Epoch (time = 0)
 
 ===========================================================================================
 ===========================================================================================
 4: Rational and Misc Notes
-	A test file has been added to run logic tests in the event of future refactoring
-	
+	A test file has been added to run logic tests in the event of future refactoring.
+
 	A maximum to the rain collection data was considered but not added. The world 
 	record of 12 inches in an hour was considered, but rainfall greater than that is 
 	possible albiet extremely unlikely in Pennsylvania. Any buffer added to the record
@@ -61,12 +61,18 @@ ________________________________________________________________________________
 	properly. Every record was recorded at 12:00am and was seperated by at least a day.
 	This meant that there was no hourly running totals to deaccumulate and any peak thirty
 	minute would simply be the peak record. The data_generation script generated realistic
-	data that created a running total if 
+	data that created a running total if the new data points occurred within the same hour.
+
+	The peak thirty minute data is returned through the console. This was chosen as it is 
+	the cleanest way to display the data. Alternatives would be simple to implement should
+	the client want it returned in another format.
 
 	All data manipulation is input independent. To run an SQL database or API, create 
 	an IO script to convert the chosen data into a list of tuples and to convert the 
 	tuples back for the output. A the 'main' file can be edited to run other input 
 	types with if statements and arguments. 
+
+	
 
 	
 
