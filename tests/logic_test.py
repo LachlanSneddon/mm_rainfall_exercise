@@ -7,6 +7,7 @@ import os
 
 def deaccum_test():
     # tests de-accumulation algorithm
+    # prints pass/fail
 
     deaccum_test = csv_io.csv_input(os.getcwd().replace('\\', '/') + "/test_csv_files/input/deaccumRainfall_test.csv")
     path = os.getcwd().replace('\\', '/') + "/test_csv_files/input/accumRainfall_test.csv"
