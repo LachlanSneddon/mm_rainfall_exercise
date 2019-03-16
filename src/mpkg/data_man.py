@@ -37,9 +37,11 @@ def get_i_subsets(input_data):
                 else:
                     break
         if count != 0:
-            if not(set(t_subset).issubset(set(subsets[count - 1]))):
-                # stops sets that are subsets of the prior set
+            if not(set(t_subset).issubset(set(subsets[-1]))):
+                # if temp subset is subset of last subset
                 subsets.append(t_subset)
+        else:
+            subsets.append(t_subset)
     return subsets
 
 
