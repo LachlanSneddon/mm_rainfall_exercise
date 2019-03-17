@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Version: 1.0
 # Created by: Lachlan Sneddon
 
@@ -32,7 +32,7 @@ def main():
 
             print("The peak thirty minute data set is: ")
             print(peak_thirty_data)
-            print("With a maximum rainfall of: " + str(peak_thirty_sum))
+            print("With a maximum rainfall of: " + str(peak_thirty_sum) + " inches")
         else:
             print(file + " is not a csv")
 

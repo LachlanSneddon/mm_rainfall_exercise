@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # Version: 1.0
 # Created by: Lachlan Sneddon
 
