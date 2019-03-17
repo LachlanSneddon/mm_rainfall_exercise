@@ -49,7 +49,7 @@ ________________________________________________________________________________
 	The measurements are from Pennsylvania, USA so it is assumed they are in inches
 ===========================================================================================
 ===========================================================================================
-4: Rational and Misc Notes
+4: Rationale and Misc Notes
 	A test file has been added to run logic tests in the event of future refactoring.
 	Note: This test file is just indicative of a proper test file
 	
